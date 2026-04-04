@@ -1,0 +1,15 @@
+resources:
+  pipelines:
+    pipeline_dlt_orders_pipeline:
+      name: dlt_orders_pipeline
+      clusters:
+        - label: default
+          node_type_id: m5d.large
+          driver_node_type_id: m5d.large
+          num_workers: 1
+      libraries:
+        - notebook:
+            path: ../notebooks/dlt_dab_demo_orders.sql
+      schema: ${resources.schemas.default_schema.name}
+      development: true
+      catalog: ${resources.schemas.default_schema.catalog_name}

@@ -1,0 +1,12 @@
+resources:
+  jobs:
+    demo_dab_job:
+      name: demo_dab_job
+      tasks:
+        - task_key: demo_notebook
+          notebook_task:
+            notebook_path: ../notebooks/demo_repo_notebooks.py
+            source: WORKSPACE
+          existing_cluster_id: 0315-100447-xrsscsnj
+      queue:
+        enabled: true
