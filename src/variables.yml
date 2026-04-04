@@ -1,0 +1,4 @@
+variables:
+  catalog:
+    description: This is the name of target catalog
+    default: priya_ap_south_1_ws01
